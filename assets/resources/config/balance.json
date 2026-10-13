@@ -1,0 +1,97 @@
+{
+  "damage": {
+    "max_total_dmg_multiplier": 60,
+    "percent_buff_cap": 7,
+    "crit_dmg_default": 2
+  },
+  "attr_cap": {
+    "shield_max_reduction": 0.5,
+    "atk_speed": 5,
+    "crit_rate": 0.75,
+    "move_speed_px": 400,
+    "pickup_range_px": 300,
+    "hp_regen_per_sec_ratio": 0.06,
+    "exp_gain": 3,
+    "gold_gain": 3
+  },
+  "buff": {
+    "offer_count": 3,
+    "carry_slots_base": 4,
+    "carry_slots_max": 7,
+    "behavior_skill_slots": 3,
+    "behavior_skill_slots_max": 6,
+    "stat_stack_max": 6,
+    "aura_refresh_s": 0.4
+  },
+  "combat": {
+    "bounce_retarget_range_px": 260,
+    "knockback_lock_ms": 220,
+    "contact_interval_ms": 500,
+    "contact_dist_px": 12,
+    "bullet_speed_px_per_sec": 420,
+    "bullet_radius_px": 6,
+    "bullet_life_ms": 1200,
+    "hit_flash_ms": 120,
+    "hit_effect_ms": 160,
+    "death_effect_ms": 280,
+    "damage_text_ms": 600,
+    "hp_regen_interval_ms": 1000,
+    "extra_projectile_spread_deg": 14,
+    "dot_tick_ms": 500
+  },
+  "time_pressure": {
+    "interval_s": 15,
+    "step_ratio": 0.04,
+    "max": 3
+  },
+  "reward_softcap": {
+    "interval_s": 15,
+    "decay_ratio": 0.015,
+    "min_ratio": 0.3
+  },
+  "early_leave_bonus": {
+    "bonus_per_interval": 0.05,
+    "recommended_layer_s": 150,
+    "cap": 1.5
+  },
+  "hunter": {
+    "first_delay_s": 60,
+    "interval_base_s": 30,
+    "interval_min_s": 15
+  },
+  "meta_price": {
+    "base_price": 20,
+    "price_growth": 1.14
+  },
+  "meta_start_gold": 300,
+  "save_slots": 3,
+  "layout_mode": "auto",
+  "skill_common": {
+    "dash_stuck_ratio": 0.3,
+    "dash_stuck_sec": 0.15,
+    "cd_down_cap": 0.75,
+    "slot1_min_cd_ms": 1500,
+    "slot2_min_cd_ms": 15000
+  },
+  "skill_fx": {
+    "slash_count": 7,
+    "whirl_count": 3,
+    "ice_count": 5,
+    "flame_segments": 3,
+    "water_step_ms": 100,
+    "water_speed_px": 450
+  },
+  "performance": {
+    "max_enemy_count": 160,
+    "max_bullet_count": 400,
+    "max_float_text": 24,
+    "max_effect_count": 80,
+    "max_enemy_bullet_count": 160,
+    "max_danger_zone_count": 12,
+    "preload_bullet": 32,
+    "preload_float_text": 16,
+    "preload_effect": 24,
+    "preload_enemy_bullet": 16,
+    "preload_danger_zone": 2
+  }
+}

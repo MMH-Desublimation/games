@@ -1,0 +1,123 @@
+[
+  { "id": "atk_up_1", "name": "攻击强化 I", "type": "stat", "weight": 10, "effects": [ { "kind": "atk_up", "ratio": 0.08 } ] },
+  { "id": "atk_up_2", "name": "攻击强化 II", "type": "stat", "weight": 8, "effects": [ { "kind": "atk_up", "ratio": 0.12 } ] },
+  { "id": "atk_speed_up", "name": "攻速提升", "type": "stat", "weight": 10, "effects": [ { "kind": "atk_speed_up", "ratio": 0.10 } ] },
+  { "id": "max_hp_up", "name": "生命提升", "type": "stat", "weight": 10, "effects": [ { "kind": "max_hp_up", "ratio": 0.10 } ] },
+  { "id": "crit_rate_up", "name": "暴击提升", "type": "stat", "weight": 8, "effects": [ { "kind": "crit_rate_up", "ratio": 0.05 } ] },
+  { "id": "crit_dmg_up", "name": "暴伤提升", "type": "stat", "weight": 6, "effects": [ { "kind": "crit_dmg_up", "ratio": 0.30 } ] },
+  { "id": "move_speed_up", "name": "移速提升", "type": "stat", "weight": 8, "effects": [ { "kind": "move_speed_up", "ratio": 0.08 } ] },
+  { "id": "exp_gain_up", "name": "经验加成", "type": "stat", "weight": 8, "effects": [ { "kind": "exp_gain_up", "ratio": 0.10 } ] },
+  { "id": "gold_gain_up", "name": "金币加成", "type": "stat", "weight": 7, "effects": [ { "kind": "gold_gain_up", "ratio": 0.10 } ] },
+  { "id": "hp_regen_up", "name": "生命回复", "type": "stat", "weight": 7, "effects": [ { "kind": "hp_regen_up", "ratio": 0.01 } ] },
+  { "id": "lifesteal_up", "name": "吸血", "type": "stat", "weight": 6, "effects": [ { "kind": "lifesteal_up", "ratio": 0.05 } ] },
+
+  { "id": "s1_cd_down", "name": "技能1冷却", "type": "skill", "weight": 8, "effects": [ { "kind": "skill_cd_down", "slot": 1, "ratio": 0.15 } ] },
+  { "id": "s2_cd_down", "name": "技能2冷却", "type": "skill", "weight": 6, "effects": [ { "kind": "skill_cd_down", "slot": 2, "ratio": 0.15 } ] },
+  { "id": "s1_dmg_up", "name": "技能1伤害", "type": "skill", "weight": 8, "effects": [ { "kind": "skill_dmg_up", "slot": 1, "ratio": 0.15 } ] },
+  { "id": "s2_dmg_up", "name": "技能2伤害", "type": "skill", "weight": 6, "effects": [ { "kind": "skill_dmg_up", "slot": 2, "ratio": 0.20 } ] },
+  { "id": "s1_duration_up", "name": "技能1时长", "type": "skill", "weight": 7, "effects": [ { "kind": "skill_duration_up", "slot": 1, "ratio": 0.15 } ] },
+  { "id": "s2_duration_up", "name": "技能2时长", "type": "skill", "weight": 6, "effects": [ { "kind": "skill_duration_up", "slot": 2, "ratio": 0.20 } ] },
+  { "id": "all_skill_dmg_up", "name": "全技能伤害", "type": "skill", "weight": 6, "effects": [ { "kind": "all_skill_dmg_up", "ratio": 0.10 } ] },
+
+  { "id": "pierce", "name": "穿透", "type": "behavior", "weight": 8, "effects": [ { "kind": "bullet_pierce", "value": 2 } ] },
+  { "id": "chain", "name": "连锁", "type": "behavior", "weight": 5, "effects": [ { "kind": "chain", "value": 1, "ratio": 0.80, "range_px": 190 } ] },
+  { "id": "bigger_bullet", "name": "巨矢", "type": "behavior", "weight": 5, "effects": [ { "kind": "bullet_size_up", "ratio": 0.60 } ] },
+  { "id": "wider_skill", "name": "技能范围", "type": "behavior", "weight": 5, "effects": [ { "kind": "skill_range_up", "ratio": 0.20 } ] },
+  { "id": "thorns", "name": "荆棘", "type": "behavior", "weight": 5, "effects": [ { "kind": "thorns", "ratio": 0.25 } ] },
+  { "id": "freeze_on_hit", "name": "冰缓", "type": "behavior", "weight": 5, "effects": [ { "kind": "freeze_on_hit", "chance": 0.30, "duration_ms": 1200 } ] },
+  { "id": "bullet_speed_up", "name": "弹速", "type": "behavior", "weight": 5, "effects": [ { "kind": "bullet_speed_up", "ratio": 0.30 } ] },
+  { "id": "multi_shot", "name": "多重射击", "type": "behavior", "weight": 5, "effects": [ { "kind": "extra_projectile", "value": 1 } ] },
+  { "id": "slow_aura", "name": "减速光环", "type": "behavior", "weight": 5, "effects": [ { "kind": "aura_slow", "ratio": 0.30, "range_px": 240 } ] },
+  { "id": "burn", "name": "灼烧", "type": "behavior", "weight": 5, "effects": [ { "kind": "burn", "dps_ratio": 0.35, "duration_ms": 3000 } ] },
+  { "id": "dash_cd_reset", "name": "疾影", "type": "behavior", "weight": 4, "effects": [ { "kind": "kill_reset_dash", "value": true } ] },
+  { "id": "second_wind", "name": "不屈", "type": "behavior", "weight": 2, "effects": [ { "kind": "revive_once", "value": true, "ratio": 0.5 } ] },
+
+  {
+    "id": "bh_slash", "name": "剑气斩", "type": "skill_behavior", "weight": 5, "fx": "slash_curved",
+    "effects": [ { "kind": "cs_slash" } ],
+    "levels": [
+      { "interval_ms": 2000, "damage_ratio": 1.60, "range_px": 190, "width_px": 90 },
+      { "interval_ms": 1900, "damage_ratio": 1.80, "range_px": 208, "width_px": 105 },
+      { "interval_ms": 1800, "damage_ratio": 2.00, "range_px": 226, "width_px": 120 },
+      { "interval_ms": 1700, "damage_ratio": 2.20, "range_px": 244, "width_px": 135 },
+      { "interval_ms": 1600, "damage_ratio": 2.40, "range_px": 262, "width_px": 150 }
+    ]
+  },
+  {
+    "id": "bh_whirl", "name": "旋风斩", "type": "skill_behavior", "weight": 5, "fx": "circular_slash",
+    "effects": [ { "kind": "cs_whirl" } ],
+    "levels": [
+      { "interval_ms": 1900, "damage_ratio": 1.20, "radius_px": 150 },
+      { "interval_ms": 1800, "damage_ratio": 1.38, "radius_px": 162 },
+      { "interval_ms": 1700, "damage_ratio": 1.56, "radius_px": 175 },
+      { "interval_ms": 1600, "damage_ratio": 1.74, "radius_px": 188 },
+      { "interval_ms": 1500, "damage_ratio": 1.92, "radius_px": 200 }
+    ]
+  },
+  {
+    "id": "bh_frenzy", "name": "狂斩", "type": "skill_behavior", "weight": 4, "fx": "slash_double_curved",
+    "effects": [ { "kind": "cs_frenzy" } ],
+    "levels": [
+      { "interval_ms": 2600, "damage_ratio": 0.85, "hits": 3, "range_px": 70, "hit_interval_ms": 90 },
+      { "interval_ms": 2500, "damage_ratio": 1.00, "hits": 3, "range_px": 72, "hit_interval_ms": 86 },
+      { "interval_ms": 2400, "damage_ratio": 1.15, "hits": 4, "range_px": 74, "hit_interval_ms": 82 },
+      { "interval_ms": 2300, "damage_ratio": 1.30, "hits": 4, "range_px": 76, "hit_interval_ms": 78 },
+      { "interval_ms": 2200, "damage_ratio": 1.45, "hits": 5, "range_px": 78, "hit_interval_ms": 74 }
+    ]
+  },
+  {
+    "id": "bh_bomb", "name": "爆弹", "type": "skill_behavior", "weight": 5, "fx": "explosion",
+    "effects": [ { "kind": "cs_bomb" } ],
+    "levels": [
+      { "interval_ms": 2300, "damage_ratio": 1.50, "range_px": 480, "explode_radius_px": 130, "radius_scale": 1.55 },
+      { "interval_ms": 2200, "damage_ratio": 1.70, "range_px": 520, "explode_radius_px": 145, "radius_scale": 1.60 },
+      { "interval_ms": 2100, "damage_ratio": 1.90, "range_px": 560, "explode_radius_px": 160, "radius_scale": 1.65 },
+      { "interval_ms": 2000, "damage_ratio": 2.10, "range_px": 620, "explode_radius_px": 175, "radius_scale": 1.70 },
+      { "interval_ms": 1800, "damage_ratio": 2.30, "range_px": 680, "explode_radius_px": 190, "radius_scale": 1.75 }
+    ]
+  },
+  {
+    "id": "bh_flame", "name": "喷火", "type": "skill_behavior", "weight": 5, "fx": "flam",
+    "effects": [ { "kind": "cs_flame" } ],
+    "levels": [
+      { "interval_ms": 2100, "damage_ratio": 1.10, "range_px": 380, "width_px": 130, "tick_ms": 150, "duration_ms": 1400, "burn_dps_ratio": 0.35, "burn_ms": 3000 },
+      { "interval_ms": 2000, "damage_ratio": 1.25, "range_px": 415, "width_px": 142, "tick_ms": 150, "duration_ms": 1500, "burn_dps_ratio": 0.40, "burn_ms": 3000 },
+      { "interval_ms": 1900, "damage_ratio": 1.40, "range_px": 450, "width_px": 155, "tick_ms": 150, "duration_ms": 1600, "burn_dps_ratio": 0.45, "burn_ms": 3000 },
+      { "interval_ms": 1800, "damage_ratio": 1.55, "range_px": 485, "width_px": 168, "tick_ms": 150, "duration_ms": 1700, "burn_dps_ratio": 0.50, "burn_ms": 3000 },
+      { "interval_ms": 1700, "damage_ratio": 1.70, "range_px": 520, "width_px": 180, "tick_ms": 150, "duration_ms": 1800, "burn_dps_ratio": 0.55, "burn_ms": 3000 }
+    ]
+  },
+  {
+    "id": "bh_ice", "name": "冰暴", "type": "skill_behavior", "weight": 5, "fx": "ice",
+    "effects": [ { "kind": "cs_ice" } ],
+    "levels": [
+      { "interval_ms": 2100, "damage_ratio": 1.30, "radius_px": 340, "slow_ratio": 0.30, "slow_ms": 1600 },
+      { "interval_ms": 2000, "damage_ratio": 1.45, "radius_px": 368, "slow_ratio": 0.34, "slow_ms": 1750 },
+      { "interval_ms": 1900, "damage_ratio": 1.60, "radius_px": 396, "slow_ratio": 0.38, "slow_ms": 1900 },
+      { "interval_ms": 1800, "damage_ratio": 1.75, "radius_px": 424, "slow_ratio": 0.42, "slow_ms": 2050 },
+      { "interval_ms": 1700, "damage_ratio": 1.90, "radius_px": 452, "slow_ratio": 0.46, "slow_ms": 2200 }
+    ]
+  },
+  {
+    "id": "bh_water", "name": "水柱", "type": "skill_behavior", "weight": 5, "fx": "water_pillar",
+    "effects": [ { "kind": "cs_water" } ],
+    "levels": [
+      { "interval_ms": 2200, "damage_ratio": 1.20, "count": 3, "range_px": 460, "width_px": 46, "speed_px": 460, "knockback_px": 45 },
+      { "interval_ms": 2100, "damage_ratio": 1.33, "count": 3, "range_px": 510, "width_px": 48, "speed_px": 480, "knockback_px": 50 },
+      { "interval_ms": 2000, "damage_ratio": 1.46, "count": 4, "range_px": 560, "width_px": 50, "speed_px": 500, "knockback_px": 55 },
+      { "interval_ms": 1900, "damage_ratio": 1.59, "count": 4, "range_px": 610, "width_px": 52, "speed_px": 530, "knockback_px": 60 },
+      { "interval_ms": 1800, "damage_ratio": 1.72, "count": 5, "range_px": 660, "width_px": 56, "speed_px": 560, "knockback_px": 65 }
+    ]
+  },
+  {
+    "id": "bh_shield", "name": "护盾", "type": "skill_behavior", "weight": 5, "fx": "shield_blue",
+    "effects": [ { "kind": "cs_shield" } ],
+    "levels": [
+      { "interval_ms": 12000, "duration_ms": 3000, "damage_reduction": 0.25 },
+      { "interval_ms": 11500, "duration_ms": 3400, "damage_reduction": 0.30 },
+      { "interval_ms": 11000, "duration_ms": 3800, "damage_reduction": 0.35 },
+      { "interval_ms": 10500, "duration_ms": 4200, "damage_reduction": 0.45 },
+      { "interval_ms": 10000, "duration_ms": 5000, "damage_reduction": 0.50 }
+    ]
+  }
+]

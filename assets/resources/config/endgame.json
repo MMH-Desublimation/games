@@ -1,0 +1,51 @@
+{
+  "unlock": {
+    "require_base_clear": true
+  },
+  "stall_target_layers": [20, 30],
+  "modes": {
+    "base": {
+      "name": "本体",
+      "max_layers": 25,
+      "unlimited": false,
+      "difficulty": "round_formula",
+      "round_layers": 5,
+      "hp_factor_per_layer": 1.15,
+      "atk_factor_per_layer": 1.12,
+      "hp_factor_per_round": 1.50,
+      "atk_factor_per_round": 1.35,
+      "reward_growth": 1.0,
+      "soft_cap": true,
+      "fail_keep_ratio": 1.0
+    },
+    "normal": {
+      "name": "普通地图",
+      "max_layers": 0,
+      "unlimited": true,
+      "difficulty": "round_formula",
+      "round_layers": 5,
+      "hp_factor_per_layer": 1.15,
+      "atk_factor_per_layer": 1.12,
+      "hp_factor_per_round": 1.6,
+      "atk_factor_per_round": 1.35,
+      "reward_growth": 1.0,
+      "soft_cap": false,
+      "fail_keep_ratio": 1.0
+    },
+    "challenge": {
+      "name": "挑战地图",
+      "max_layers": 0,
+      "unlimited": true,
+      "difficulty": "challenge_formula",
+      "reward_growth": 1.12,
+      "max_reward_factor": 50,
+      "soft_cap": false,
+      "fail_keep_ratio": 0.5,
+      "enemy_hp_base": 100,
+      "enemy_hp_growth": 1.18,
+      "enemy_hp_layer_bonus": 0.02,
+      "enemy_atk_base": 10,
+      "enemy_atk_growth": 1.10
+    }
+  }
+}

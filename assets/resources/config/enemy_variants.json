@@ -1,0 +1,86 @@
+{
+  "_note": "敌人变体（T14-S2）：按层解锁不同威胁度的怪物种类；sheet 指向 actors.json 的 monsters 键。",
+  "base_weight": 2,
+  "default_sheet": "slime",
+  "variants": [
+    {
+      "id": "swift",
+      "name": "疾行种",
+      "min_layer": 3,
+      "weight": 3,
+      "sheet": "bluebat",
+      "hp_ratio": 0.55,
+      "atk_ratio": 1,
+      "speed_ratio": 1.45,
+      "render_ratio": 0.95
+    },
+    {
+      "id": "tank",
+      "name": "铁甲种",
+      "min_layer": 6,
+      "weight": 2,
+      "sheet": "bear",
+      "hp_ratio": 1.8,
+      "atk_ratio": 1.35,
+      "speed_ratio": 0.7,
+      "render_ratio": 1.15
+    },
+    {
+      "id": "phantom",
+      "name": "幻影种",
+      "min_layer": 8,
+      "weight": 2.5,
+      "sheet": "spirit",
+      "hp_ratio": 0.9,
+      "atk_ratio": 1.1,
+      "speed_ratio": 1.15,
+      "render_ratio": 1,
+      "alpha": 130
+    },
+    {
+      "id": "thrower",
+      "name": "投掷种",
+      "min_layer": 9,
+      "weight": 1.4,
+      "sheet": "cyclope",
+      "hp_ratio": 1.1,
+      "atk_ratio": 1.15,
+      "speed_ratio": 0.6,
+      "render_ratio": 1,
+      "ranged": {
+        "cooldown_ms": 3000,
+        "speed_px": 180,
+        "radius_px": 10,
+        "life_ms": 2600,
+        "damage_ratio": 0.9,
+        "keep_distance_px": 250,
+        "max_range_px": 460
+      }
+    },
+    {
+      "id": "swarm",
+      "name": "群翅种",
+      "min_layer": 11,
+      "weight": 2.5,
+      "sheet": "butterfly",
+      "hp_ratio": 0.3,
+      "atk_ratio": 0.7,
+      "speed_ratio": 1.35,
+      "render_ratio": 0.85
+    },
+    {
+      "id": "brute",
+      "name": "巨兽种",
+      "min_layer": 15,
+      "weight": 1.6,
+      "sheet": "dragon",
+      "hp_ratio": 2.3,
+      "atk_ratio": 1.6,
+      "speed_ratio": 0.85,
+      "render_ratio": 1.25,
+      "burst_speed_ratio": 1.6,
+      "burst_ms": 1200,
+      "burst_interval_ms": 3200
+    }
+  ]
+}

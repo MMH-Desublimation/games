@@ -1,0 +1,24 @@
+{
+  "platform": "android",
+  "debug": false,
+  "outputName": "android",
+  "packages": {
+    "android": {
+      "packageName": "com.roguelike.dungeonsurvival",
+      "orientation": {
+        "portrait": true,
+        "upsideDown": false,
+        "landscapeLeft": false,
+        "landscapeRight": false
+      },
+      "apiLevel": "android-34",
+      "appABIs": ["arm64-v8a"],
+      "useDebugKeystore": true,
+      "renderBackEnd": {
+        "vulkan": false,
+        "gles3": true,
+        "gles2": false
+      }
+    }
+  }
+}
