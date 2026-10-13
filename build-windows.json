@@ -1,0 +1,15 @@
+{
+  "platform": "windows",
+  "debug": false,
+  "outputName": "windows",
+  "packages": {
+    "windows": {
+      "targetPlatform": "win32",
+      "renderBackEnd": {
+        "gles3": true,
+        "gles2": false,
+        "vulkan": false
+      }
+    }
+  }
+}
