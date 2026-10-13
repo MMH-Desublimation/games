@@ -17,12 +17,40 @@ const path = require('path');
 const os = require('os');
 const { exec } = require('child_process');
 
-/** 依次尝试的产物目录：发行包布局 → 仓库布局。 */
-const CANDIDATES = [
-  path.join(__dirname, 'web'),
-  path.join(__dirname, '..', 'build', 'web-mobile'),
-];
-const ROOT = CANDIDATES.find((p) => fs.existsSync(path.join(p, 'index.html')));
+/**
+ * 依次尝试的产物目录（覆盖所有真实布局）：
+ * 1. `web/`  —— 惯例目录名；
+ * 2. 启动器**同目录**（发行包里把启动器与 `index.html` 放在一起）；
+ * 3. `../build/web-mobile` —— 在仓库 `tools/` 下运行；
+ * 4. **自动扫描**本目录下任一"含 `index.html` 的子目录" —— 发行包的目录名可能是中文
+ *    （如 `网页版/`），不能靠固定名字去找。
+ */
+function findRoot() {
+  const candidates = [
+    path.join(__dirname, 'web'),
+    __dirname,
+    path.join(__dirname, '..', 'build', 'web-mobile'),
+  ];
+  const hit = candidates.find((p) => fs.existsSync(path.join(p, 'index.html')));
+  if (hit) {
+    return hit;
+  }
+  try {
+    for (const ent of fs.readdirSync(__dirname, { withFileTypes: true })) {
+      if (!ent.isDirectory()) {
+        continue;
+      }
+      const p = path.join(__dirname, ent.name);
+      if (fs.existsSync(path.join(p, 'index.html'))) {
+        return p;
+      }
+    }
+  } catch (e) {
+    /* 忽略：下面统一报错 */
+  }
+  return null;
+}
+const ROOT = findRoot();
 const PORT = Number(process.argv[2]) || 8080;
 
 const MIME = {
