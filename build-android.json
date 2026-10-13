@@ -18,7 +18,13 @@
         "vulkan": false,
         "gles3": true,
         "gles2": false
-      }
+      },
+      "appBundle": false,
+      "androidInstant": false,
+      "sdkPath": "C:/Users/admin/android-sdk",
+      "ndkPath": "C:/Users/admin/ndk/23.2.8568313",
+      "javaHome": "C:/Users/admin/jdk17/jdk-17.0.20.1+1",
+      "javaPath": "C:/Users/admin/jdk17/jdk-17.0.20.1+1/bin/java.exe"
     }
   }
 }
